@@ -1,0 +1,15 @@
+{
+    "name": "fraym/mailform-extension",
+    "type": "fraym-extension",
+    "description": "Create a mail formular for Fraym CMS.",
+    "license": "GPL-2.0+",
+    "keywords": [
+        "fraym",
+        "mailform",
+        "email",
+        "formular"
+    ],
+    "require": {
+        "fraym/fraym": "^1.0"
+    }
+}
