@@ -14,11 +14,7 @@ use Fraym\Annotation\Registry;
  * @package Extension\Mailform
  * @Registry(
  * name="Mailform",
- * description="Create a mail formular.",
- * version="1.0.0",
- * author="Fraym.org",
- * website="http://www.fraym.org",
- * repositoryKey="FRAYM_EXT_MAILFORM",
+ * repositoryKey="fraym/mailform-extension",
  * entity={
  *      "\Fraym\Block\Entity\Extension"={
  *          {
