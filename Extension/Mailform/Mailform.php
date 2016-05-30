@@ -25,10 +25,6 @@ use Fraym\Annotation\Registry;
  *           },
  *      }
  * },
- * files={
- *      "Extension/Mailform/",
- *      "Template/Default/Extension/Mailform/"
- * },
  * config={
   *      "MAILFORM_SUBJECT"={"value"="Mailform contact"},
   *      "MAILFORM_TO"={"value"="info@localhost"},
