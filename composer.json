@@ -19,6 +19,6 @@
         "formular"
     ],
     "require": {
-        "fraym/fraym": ">1.0.0"
+        "fraym/core": "^1.0.0"
     }
 }
