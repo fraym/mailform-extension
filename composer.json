@@ -18,6 +18,11 @@
         "email",
         "formular"
     ],
+    "autoload": {
+        "psr-4": {
+            "Extension\\Mailform\\": "Extension/Mailform/"
+        }
+    },
     "require": {
         "fraym/core": "^1.0.0"
     }
