@@ -20,7 +20,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "Extension\\Mailform\\": "Extension/Mailform/"
+            "Fraym\\Extension\\Mailform\\": "Extension/Mailform/"
         }
     },
     "require": {

@@ -5,13 +5,12 @@
  * @copyright Dominik Weber <info@fraym.org>
  * @license   http://www.opensource.org/licenses/gpl-license.php GNU General Public License, version 2 or later (see the LICENSE file)
  */
-namespace Extension\Mailform;
+namespace Fraym\Extension\Mailform;
 
-use \Fraym\Block\BlockXml as BlockXml;
 use Fraym\Annotation\Registry;
 
 /**
- * @package Extension\Mailform
+ * @package Fraym\Extension\Mailform
  * @Registry(
  * name="Mailform",
  * repositoryKey="fraym/mailform-extension",
@@ -20,7 +19,7 @@ use Fraym\Annotation\Registry;
  *          {
  *           "name"="Mailform",
  *           "description"="Create a mail formular.",
- *           "class"="\Extension\Mailform\Mailform",
+ *           "class"="\Fraym\Extension\Mailform\Mailform",
  *           "execMethod"="execBlock"
  *           },
  *      }
@@ -36,7 +35,7 @@ class Mailform
 {
     /**
      * @Inject
-     * @var \Extension\Mailform\MailformController
+     * @var \Fraym\Extension\Mailform\MailformController
      */
     protected $mailformController;
 
