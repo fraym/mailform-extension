@@ -1,14 +1,14 @@
-<div id="contact_form" class="rapid_contact ">
+<div id="fraym-mailform">
 
     {if $submit && count((array)$errors) == 0}
         <div class="alert alert-success bs-alert-old-docs">
               <strong>{_('Your message has been sent')}!</strong>
         </div>
     {else}
-    <form action="" method="post" class="form-horizontal">
+    <form action="" method="post">
         <input type="hidden" name="mailform" value="1"/>
-        <input type="hidden" name="required[name]" value="1"/>
-        <input type="hidden" name="required[msg]" value="1"/>
+        <input type="hidden" name="required[msg]" value="regex(/[0-9]+/)"/>
+        <input type="hidden" name="required[name]" value="notEmpty"/>
 
         <div class="form-group{if $errors.name} error{/if}">
             <label for="name">{_('Name')}*</label>

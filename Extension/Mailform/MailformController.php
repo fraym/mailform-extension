@@ -30,4 +30,15 @@ class MailformController extends \Fraym\Core
         $this->view->assign('errors', $errors);
         $this->view->setTemplate('Block');
     }
+
+    /**
+     * @param null $blockConfig
+     */
+    public function getBlockConfig($blockConfig = null)
+    {
+        $locales = $this->db->getRepository('\Fraym\Locale\Entity\Locale')->findAll();
+        $this->view->assign('blockConfig', $blockConfig, false);
+        $this->view->assign('locales', $locales);
+        $this->view->render('BlockConfig');
+    }
 }
