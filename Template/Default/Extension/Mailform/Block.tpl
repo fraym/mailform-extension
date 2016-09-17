@@ -5,52 +5,57 @@
               <strong>{_('Your message has been sent')}!</strong>
         </div>
     {else}
-    <form action="" method="post">
-        <input type="hidden" name="mailform" value="1"/>
-        <input type="hidden" name="required[msg]" value="regex(/[0-9]+/)"/>
-        <input type="hidden" name="required[name]" value="notEmpty"/>
 
-        <div class="form-group{if $errors.name} error{/if}">
-            <label for="name">{_('Name')}*</label>
+        {if $submit && count((array)$errors) > 0}
+            <div class="alert alert-danger" role="alert">{_('Please check the required fields!')}</div>
+        {/if}
 
-            <div class="controls">
-                <input class="form-control" type="text" id="name" name="field[name]" placeholder="{_('Name')}"
-                       value="{$values.field.name}">
-            </div>
-        </div>
-        
-        <div class="form-group{if $errors.email} error{/if}">
-            <label for="email">{_('E-Mail')}*</label>
+        <form action="" method="post">
+            <input type="hidden" name="mailform" value="1"/>
+            <input type="hidden" name="required[msg]" value="notEmpty"/>
+            <input type="hidden" name="required[name]" value="notEmpty"/>
 
-            <div class="controls">
-                <input class="form-control" type="text" placeholder="Email" name="field[email]" id="email"
-                       value="{$values.field.email}">
-            </div>
-        </div>
-        
-        <div class="form-group">
-            <label for="phone">{_('Phone')}</label>
+            <div class="form-group{if $errors.name} error{/if}">
+                <label for="name">{_('Name')}*</label>
 
-            <div class="controls">
-                <input class="form-control" type="text" name="field[phone]" placeholder="{_('Phone')}"
-                       id="rp_subject" value="{$values.field.phone}">
+                <div class="controls">
+                    <input class="form-control" type="text" id="name" name="field[name]" placeholder="{_('Name')}"
+                           value="{$values.field.name}">
+                </div>
             </div>
-        </div>
-        
-        <div class="form-group{if $errors.msg} error{/if}">
-            <label for="msg">{_('Message')}*</label>
 
-            <div class="controls">
-                <textarea class="form-control" placeholder="{_('Message')}" name="field[msg]" id="msg">{$values.field.msg}</textarea>
+            <div class="form-group{if $errors.email} error{/if}">
+                <label for="email">{_('E-Mail')}*</label>
+
+                <div class="controls">
+                    <input class="form-control" type="text" placeholder="Email" name="field[email]" id="email"
+                           value="{$values.field.email}">
+                </div>
             </div>
-        </div>
-        
-        <div class="form-group">
-            <div class="controls">
-                <input class="btn btn-default" id="submit-form" type="submit" value="{_('Send message')}">
+
+            <div class="form-group">
+                <label for="phone">{_('Phone')}</label>
+
+                <div class="controls">
+                    <input class="form-control" type="text" name="field[phone]" placeholder="{_('Phone')}"
+                           id="rp_subject" value="{$values.field.phone}">
+                </div>
             </div>
-        </div>
-        
-    </form>
+
+            <div class="form-group{if $errors.msg} error{/if}">
+                <label for="msg">{_('Message')}*</label>
+
+                <div class="controls">
+                    <textarea class="form-control" placeholder="{_('Message')}" name="field[msg]" id="msg">{$values.field.msg}</textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="controls">
+                    <input class="btn btn-default" id="submit-form" type="submit" value="{_('Send message')}">
+                </div>
+            </div>
+
+        </form>
     {/if}
 </div>
